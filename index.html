@@ -1,0 +1,76 @@
+ <!-- Index Mod4.1 HTML Page By JennH -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Mod4.1</title>
+    
+    <title>UAT In Motion</title>
+<style>
+  .meme {
+    position: absolute;
+    width: 100px;
+    transition: transform 0.5s ease;
+  }
+</style>
+</head>
+<body>
+
+<button id="startButton" onclick="toggleStart()">Move</button>
+<button id="stopButton" onclick="toggleStop()" disabled>Pause</button>
+<img src="https://www.uat.edu/themes/uat/images/uat-logo.png" alt="Meme Image" class="meme" id="memeImage">
+
+<script>
+let memeMoving = null;
+
+function moveMeme() {
+  const memeImage = document.getElementById('memeImage');
+  const newX = Math.random() * (window.innerWidth - memeImage.width);
+  const newY = Math.random() * (window.innerHeight - memeImage.height);
+  memeImage.style.transform = `translate(${newX}px, ${newY}px)`;
+}
+
+function toggleStart() {
+  document.getElementById('startButton').disabled = true;
+  document.getElementById('stopButton').disabled = false;
+  memeMoving = setInterval(moveMeme, 1000);
+}
+
+function toggleStop() {
+  document.getElementById('stopButton').disabled = true;
+  document.getElementById('startButton').disabled = false;
+  clearInterval(memeMoving);
+}
+</script>
+
+</body>
+</html>
+
+</head>
+<body>
+
+    <header>Assignment 4.1 Event Driven Concepts</header>
+    <p>Object-Oriented Programming</p>
+    <h1>JennH 88038</h1>
+    <h6>UAT CSC102</h6>
+    <p>
+
+     
+    </p>
+</body>
+<body><nav>
+    <a href="https://www.uat.edu/">
+        <img src="https://www.uat.edu/themes/uat/images/uat-logo.png">
+        </a>
+        <a href=""learn_js.html">Home</a>
+        <a href=""learn_js.html">About</a>
+        <a href=""learn_js.html">Contact</a>
+        <a href=""learn_js.html">FAQs</a>
+
+</nav>
+
+</body>
+</html>
